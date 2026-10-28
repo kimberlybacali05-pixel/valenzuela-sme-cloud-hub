@@ -1,0 +1,314 @@
+<html>
+        <head><title>Downloaded HTML</title></head>
+        <body>
+            <pre style="white-space: pre-wrap; word-wrap: break-word;">```html
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-[#fbf8f3]">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valenzuela SME Cloud Accounting Hub</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts: Caveat, Architects Daughter, Gochi Hand, Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@500;600;700&family=Gochi+Hand&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fbf8f3;
+            color: #2c2a29;
+            background-image: radial-gradient(#e5decf 0.75px, transparent 0.75px);
+            background-size: 16px 16px;
+        }
+        .font-hand { font-family: 'Caveat', cursive; }
+        .font-sketch { font-family: 'Architects Daughter', cursive; }
+        .font-gochi { font-family: 'Gochi Hand', cursive; }
+
+        /* Hand-drawn style borders and boxes */
+        .sketch-box {
+            border: 2px solid #2c2a29;
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            box-shadow: 3px 4px 0px 0px #2c2a29;
+            transition: all 0.2s ease;
+        }
+        .sketch-box:hover {
+            box-shadow: 5px 6px 0px 0px #2c2a29;
+            transform: translateY(-2px);
+        }
+        .sketch-box-soft {
+            border: 2px solid #2c2a29;
+            border-radius: 18px 225px 15px 255px/255px 15px 225px 15px;
+            box-shadow: 2px 3px 0px 0px rgba(44,42,41,0.8);
+        }
+        .sketch-btn {
+            border: 2px solid #2c2a29;
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            box-shadow: 3px 3px 0px 0px #2c2a29;
+            transition: all 0.15s ease;
+        }
+        .sketch-btn:active {
+            box-shadow: 1px 1px 0px 0px #2c2a29;
+            transform: translate(2px, 2px);
+        }
+        .sketch-badge {
+            border: 1.5px solid #2c2a29;
+            border-radius: 12px 180px 10px 160px/160px 10px 180px 12px;
+        }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f3ece0; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #c5b7a0; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #9e8e75; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#fbf8f3',
+                        paper: '#f5efe4',
+                        mustard: '#eab308',
+                        warmYellow: '#f3c74d',
+                        terracotta: '#d96b52',
+                        dustyRed: '#c85040',
+                        slateBlue: '#3b5998',
+                        mutedTeal: '#4a7c59',
+                        lavenderGrey: '#8e8299',
+                        ink: '#2c2a29'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="h-full flex flex-col antialiased">
+
+    <!-- TOP NAVIGATION -->
+    <header class="bg-[#f5efe4] border-b-2 border-ink sticky top-0 z-30 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand & Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="bg-warmYellow p-2 sketch-box">
+                        <i data-lucide="cloud-cog" class="w-6 h-6 text-ink"></i>
+                    </div>
+                    <div>
+                        <span class="font-bold text-lg sm:text-xl tracking-tight block text-ink">Valenzuela SME Cloud Accounting Hub</span>
+                        <span class="font-hand text-base text-terracotta font-semibold hidden sm:block">Research Intangible Output • Editorial Handbook</span>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="hidden lg:flex space-x-1 font-sketch text-xs font-bold">
+                    <button onclick="switchTab('quiz')" id="nav-quiz" class="nav-btn px-3 py-2 rounded-lg border-2 border-transparent hover:border-ink hover:bg-warmYellow/30 transition flex items-center space-x-1.5 active">
+                        <i data-lucide="clipboard-check" class="w-4 h-4"></i>
+                        <span>Readiness Quiz</span>
+                    </button>
+                    <button onclick="switchTab('tco')" id="nav-tco" class="nav-btn px-3 py-2 rounded-lg border-2 border-transparent hover:border-ink hover:bg-warmYellow/30 transition flex items-center space-x-1.5">
+                        <i data-lucide="calculator" class="w-4 h-4"></i>
+                        <span>TCO Calculator</span>
+                    </button>
+                    <button onclick="switchTab('checklist')" id="nav-checklist" class="nav-btn px-3 py-2 rounded-lg border-2 border-transparent hover:border-ink hover:bg-warmYellow/30 transition flex items-center space-x-1.5">
+                        <i data-lucide="list-checks" class="w-4 h-4"></i>
+                        <span>Error Audit Checklist</span>
+                    </button>
+                    <button onclick="switchTab('matrix')" id="nav-matrix" class="nav-btn px-3 py-2 rounded-lg border-2 border-transparent hover:border-ink hover:bg-warmYellow/30 transition flex items-center space-x-1.5">
+                        <i data-lucide="layers" class="w-4 h-4"></i>
+                        <span>System Matrix</span>
+                    </button>
+                    <button onclick="switchTab('resources')" id="nav-resources" class="nav-btn px-3 py-2 rounded-lg border-2 border-transparent hover:border-ink hover:bg-warmYellow/30 transition flex items-center space-x-1.5">
+                        <i data-lucide="file-text" class="w-4 h-4"></i>
+                        <span>Resources</span>
+                    </button>
+                    <button onclick="switchTab('voices')" id="nav-voices" class="nav-btn px-3 py-2 rounded-lg border-2 border-transparent hover:border-ink hover:bg-warmYellow/30 transition flex items-center space-x-1.5">
+                        <i data-lucide="quote" class="w-4 h-4"></i>
+                        <span>Practitioner Voices</span>
+                    </button>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="p-2 rounded-lg border-2 border-ink bg-warmYellow sketch-btn">
+                        <i data-lucide="menu" id="menu-icon-open" class="w-6 h-6 text-ink"></i>
+                        <i data-lucide="x" id="menu-icon-close" class="w-6 h-6 text-ink hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Nav -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-[#f5efe4] border-t-2 border-ink px-4 pt-3 pb-4 space-y-2 font-sketch text-sm font-bold">
+            <button onclick="switchTab('quiz'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-lg hover:bg-warmYellow flex items-center space-x-2 text-ink">
+                <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+                <span>Readiness Quiz</span>
+            </button>
+            <button onclick="switchTab('tco'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-lg hover:bg-warmYellow flex items-center space-x-2 text-ink">
+                <i data-lucide="calculator" class="w-5 h-5"></i>
+                <span>TCO Calculator</span>
+            </button>
+            <button onclick="switchTab('checklist'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-lg hover:bg-warmYellow flex items-center space-x-2 text-ink">
+                <i data-lucide="list-checks" class="w-5 h-5"></i>
+                <span>Error Audit Checklist</span>
+            </button>
+            <button onclick="switchTab('matrix'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-lg hover:bg-warmYellow flex items-center space-x-2 text-ink">
+                <i data-lucide="layers" class="w-5 h-5"></i>
+                <span>System Matrix</span>
+            </button>
+            <button onclick="switchTab('resources'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-lg hover:bg-warmYellow flex items-center space-x-2 text-ink">
+                <i data-lucide="file-text" class="w-5 h-5"></i>
+                <span>Resources & Playbooks</span>
+            </button>
+            <button onclick="switchTab('voices'); toggleMobileMenu()" class="w-full text-left px-3 py-2 rounded-lg hover:bg-warmYellow flex items-center space-x-2 text-ink">
+                <i data-lucide="quote" class="w-5 h-5"></i>
+                <span>Practitioner Voices</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO EDITORIAL BANNER WITH CUSTOM ILLUSTRATIONS -->
+    <section class="bg-[#f3ece0] py-8 border-b-2 border-ink overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Left Editorial Text -->
+                <div class="lg:col-span-7">
+                    <div class="inline-flex items-center space-x-2 bg-warmYellow text-ink font-hand text-lg font-bold px-3 py-1 sketch-badge mb-3">
+                        <span class="w-2.5 h-2.5 rounded-full bg-terracotta"></span>
+                        <span>Finding Solid Ground in the Cloud • Service SMEs</span>
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-ink font-sketch leading-tight">
+                        Finding Solid Ground in the Cloud
+                    </h1>
+                    <p class="mt-3 text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
+                        Balancing global cloud software capabilities with Bureau of Internal Revenue (BIR) tax realities, human error bottlenecks, and practical budget constraints for Valenzuela service enterprises.
+                    </p>
+                    
+                    <div class="mt-4 flex flex-wrap items-center gap-3 font-hand text-lg font-bold text-slate-800">
+                        <div class="bg-white px-3 py-1.5 sketch-box-soft flex items-center gap-2">
+                            <i data-lucide="trending-up" class="w-4 h-4 text-terracotta"></i>
+                            <span>16.80% Philippine Cloud Growth</span>
+                        </div>
+                        <div class="bg-white px-3 py-1.5 sketch-box-soft flex items-center gap-2">
+                            <i data-lucide="user-check" class="w-4 h-4 text-slateBlue"></i>
+                            <span>Human-in-the-Loop Quality Control</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Artwork: Time-Shift Sketched Window (Style 1 - Reference 1) -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="w-full max-w-md bg-white p-4 sketch-box bg-[#faf6ee] relative">
+                        <!-- Hand-drawn Window Header -->
+                        <div class="flex items-center justify-between border-b-2 border-ink pb-2 mb-3">
+                            <div class="flex space-x-1.5">
+                                <span class="w-3 h-3 rounded-full border border-ink bg-terracotta"></span>
+                                <span class="w-3 h-3 rounded-full border border-ink bg-warmYellow"></span>
+                                <span class="w-3 h-3 rounded-full border border-ink bg-mutedTeal"></span>
+                            </div>
+                            <span class="font-sketch text-xs font-bold text-slate-700">Digital Workflow Shift.exe</span>
+                        </div>
+
+                        <!-- SVG Sketched Scenes (Hand-drawn Figures & Folders) -->
+                        <svg viewBox="0 0 400 180" class="w-full h-auto text-ink">
+                            <!-- Background Grid Lines -->
+                            <path d="M10 20 L390 20 M10 160 L390 160" stroke="#e5decf" stroke-width="1" stroke-dasharray="4,4" />
+                            
+                            <!-- Sketched Figures Moving Receipts to Cloud -->
+                            <!-- Figure 1: Climbing out of paper box (TODAY) -->
+                            <g transform="translate(30, 40)">
+                                <!-- Folder -->
+                                <path d="M 5 35 L 25 35 L 30 42 L 55 42 L 55 70 L 5 70 Z" fill="#f3c74d" stroke="#2c2a29" stroke-width="2" />
+                                <!-- Person 1 -->
+                                <circle cx="35" cy="20" r="7" fill="#f5efe4" stroke="#2c2a29" stroke-width="2"/>
+                                <path d="M 35 27 L 35 45 M 35 32 L 20 25 M 35 32 L 45 38" stroke="#2c2a29" stroke-width="2" stroke-linecap="round"/>
+                                <text x="5" y="85" font-family="'Architects Daughter', cursive" font-size="11" font-weight="bold" fill="#2c2a29">MANUAL PAPER</text>
+                            </g>
+
+                            <!-- Progress Arrow / Time Loop -->
+                            <path d="M 105 75 Q 160 30 210 75" fill="none" stroke="#d96b52" stroke-width="2.5" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+                            
+                            <!-- Figure 2: Tumbling / Diving into Cloud -->
+                            <g transform="translate(160, 30)">
+                                <circle cx="30" cy="15" r="7" fill="#f5efe4" stroke="#2c2a29" stroke-width="2"/>
+                                <path d="M 30 22 L 20 40 M 30 25 L 45 15 M 30 25 L 10 20" stroke="#2c2a29" stroke-width="2" stroke-linecap="round"/>
+                            </g>
+
+                            <!-- Figure 3: Cloud Folder (YESTERDAY -> TODAY) -->
+                            <g transform="translate(280, 35)">
+                                <!-- Cloud Shape -->
+                                <path d="M 20 50 A 15 15 0 0 1 45 35 A 20 20 0 0 1 80 40 A 15 15 0 0 1 90 60 L 15 60 Z" fill="#8e8299" opacity="0.3" stroke="#2c2a29" stroke-width="2"/>
+                                <path d="M 25 30 L 45 30 L 50 37 L 75 37 L 75 65 L 25 65 Z" fill="#f3c74d" stroke="#2c2a29" stroke-width="2" />
+                                <circle cx="15" cy="25" r="7" fill="#f5efe4" stroke="#2c2a29" stroke-width="2"/>
+                                <path d="M 15 32 L 15 50 M 15 38 L 28 42 M 15 38 L 5 42" stroke="#2c2a29" stroke-width="2" stroke-linecap="round"/>
+                                <text x="15" y="85" font-family="'Architects Daughter', cursive" font-size="11" font-weight="bold" fill="#2c2a29">CLOUD LEDGER</text>
+                            </g>
+
+                            <!-- Hand-drawn Progress Bar -->
+                            <rect x="20" y="130" width="280" h="18" rx="4" fill="#ffffff" stroke="#2c2a29" stroke-width="2"/>
+                            <rect x="24" y="134" width="180" h="10" rx="2" fill="#3b5998"/>
+                            <text x="20" y="165" font-family="'Gochi Hand', cursive" font-size="14" fill="#2c2a29">Syncing transactions to cloud... ~5 sec</text>
+
+                            <!-- Sketched Button -->
+                            <rect x="315" y="128" width="65" h="22" rx="6" fill="#f5efe4" stroke="#2c2a29" stroke-width="2"/>
+                            <text x="328" y="143" font-family="'Architects Daughter', cursive" font-size="11" font-weight="bold" fill="#2c2a29">Sync</text>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: THE OVERHEAD DESK BEFORE VS. AFTER (Style 2 - Reference Image 2) -->
+    <section class="py-10 bg-[#fbf8f3] border-b-2 border-ink">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <span class="font-hand text-xl text-terracotta font-bold block">The Physical to Digital Shift</span>
+                <h2 class="text-2xl sm:text-3xl font-bold font-sketch text-ink">Before vs. After Workspace Transformation</h2>
+                <p class="text-xs sm:text-sm text-slate-600 font-medium mt-1">Visually capturing the operational evolution of local Valenzuela service enterprises.</p>
+            </div>
+
+            <!-- Hand-Drawn SVG Overhead Desk Artwork -->
+            <div class="bg-white p-6 sketch-box bg-[#fefcf8]">
+                <svg viewBox="0 0 900 320" class="w-full h-auto text-ink">
+                    <!-- Divider Line -->
+                    <line x1="450" y1="20" x2="450" y2="300" stroke="#2c2a29" stroke-width="2" stroke-dasharray="6,6"/>
+
+                    <!-- LEFT SIDE: BEFORE (TRADITIONAL CLUTTER) -->
+                    <g transform="translate(20, 20)">
+                        <rect x="0" y="0" width="410" height="280" fill="#f3ece0" rx="12" stroke="#2c2a29" stroke-width="2"/>
+                        <text x="20" y="35" font-family="'Architects Daughter', cursive" font-size="16" font-weight="bold" fill="#c85040">BEFORE: Traditional Paper Clutter</text>
+
+                        <!-- Messy Ledgers -->
+                        <rect x="40" y="60" width="120" height="160" fill="#e8dac4" stroke="#2c2a29" stroke-width="2" transform="rotate(-8 100 140)"/>
+                        <line x1="55" y1="80" x2="140" y2="80" stroke="#2c2a29" stroke-width="1.5" transform="rotate(-8 100 140)"/>
+                        <line x1="55" y1="100" x2="140" y2="100" stroke="#2c2a29" stroke-width="1.5" stroke-dasharray="2,2" transform="rotate(-8 100 140)"/>
+
+                        <!-- Crumpled Paper Balls -->
+                        <circle cx="210" cy="90" r="14" fill="#ffffff" stroke="#2c2a29" stroke-width="1.5"/>
+                        <path d="M 202 85 Q 212 95 218 88 M 205 95 Q 215 85 210 98" stroke="#2c2a29" stroke-width="1.5"/>
+
+                        <circle cx="260" cy="210" r="16" fill="#ffffff" stroke="#2c2a29" stroke-width="1.5"/>
+                        <path d="M 252 205 Q 262 215 268 208 M 255 215 Q 265 205 260 218" stroke="#2c2a29" stroke-width="1.5"/>
+
+                        <!-- Coffee Mug with Stain -->
+                        <circle cx="320" cy="110" r="24" fill="#d96b52" opacity="0.2"/>
+                        <circle cx="320" cy="110" r="18" fill="#ffffff" stroke="#2c2a29" stroke-width="2"/>
+                        <circle cx="320" cy="110" r="14" fill="#6f4e37"/>
+
+                        <!-- Stacked Loose Receipts -->
+                        <rect x="180" y="130" width="90" height="110" fill="#ffffff" stroke="#2c2a29" stroke-width="1.5" transform="rotate(12 225 185)"/>
+                        <line x1="190" y1="145" x2="255" y2="145" stroke="#2c2a29" stroke-width="1" transform="rotate(12 225 185)"/>
+                        <line x1="190" y1="160" x2="245" y2="160" stroke="#2c2a29" stroke-width="1" transform="rotate(12 225 185)"/>
+
+                        <!-- Text Annotation -->
+                        <text x="40" y="255" font-family="'Caveat', cursive" font-size="18" font-weight="bold" fill="#2c2a29">• Misplaced Receipts • Physical Ledger Storage • Manual Errors</text>
+                    </g>
+
+                    <!-- RIGHT SIDE: AFTER (STREAMLINED CLOUD DASHBOARD) -->
+                    <g transform="translate(470, 20)"></pre>
+        </body>
+    </html>
